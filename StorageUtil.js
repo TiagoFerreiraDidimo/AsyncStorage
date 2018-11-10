@@ -10,17 +10,17 @@ export class StorageUtil {
 
 
     /**
-     * Método que registra a bebida e quantidade.
+     * Método que registra a item e quantidade.
      *
      * @param  c
-     *          Chave de acesso do usuário logado.
+     *          
      *
      * @returns {Promise<void>}
      *          Sem retorno.
      *
      * @author Tiago Ferreira Dídimo
      */
-    static setBebidasLista = async (c) => {
+    static setItemLista = async (c) => {
         try {
             await AsyncStorage.setItem('c', c);
         } catch (error) {
@@ -29,7 +29,7 @@ export class StorageUtil {
 
 
     /**
-     * Recupera a bebida e quantidade.
+     * Recupera a item e quantidade.
      *
      *
      * @returns {Promise<void>}
@@ -37,7 +37,7 @@ export class StorageUtil {
      *
      * @author Tiago Ferreira Dídimo
      */
-    static async getBebidasLista() {
+    static async getItemLista() {
         try {
             return await AsyncStorage.getItem('c');
         } catch (error) {
