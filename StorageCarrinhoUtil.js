@@ -8,7 +8,7 @@ export class StorageCarrinhoUtil {
 
 
     constructor() {
-        StorageUtil.getBebidasLista().then(
+        StorageUtil.getItemLista().then(
             value => {
                 this.code =  JSON.parse(value);
             }
@@ -27,7 +27,7 @@ export class StorageCarrinhoUtil {
      * @author Tiago Ferreira Dídimo
      */
     static async verificaCarrinho(adc){
-        StorageUtil.setBebidasLista(adc);
+        StorageUtil.setItemLista(adc);
         AlertToastUtil.alertSucesso(this.code);
 
     };
